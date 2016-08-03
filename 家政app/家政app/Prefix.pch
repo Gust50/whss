@@ -1,0 +1,42 @@
+//
+//  Prefix.pch
+//  家政app
+//
+//  Created by Gust on 16/8/3.
+//  Copyright © 2016年 Gust. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "configure.h"
+#import "AppDelegate.h"
+#import "UIView+frameExpand.h"
+#import "UIImage+ColorImage.h"
+#endif
+
+
+//屏幕宽高
+#define kDScreenWidth         ([UIScreen mainScreen].bounds).size.width
+#define kDScreenHeight        ([UIScreen mainScreen].bounds).size.height
+
+//几种屏幕的尺寸
+#define iPhone4s ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define iPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+// iOS 系统版本
+#define IOS_VERSION       [[[UIDevice currentDevice] systemVersion] floatValue]
+
+//AppDelegate
+#define SHARE_APP ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+
+#endif /* Prefix_pch */

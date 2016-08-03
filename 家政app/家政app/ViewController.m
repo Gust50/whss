@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+//#import "Prefix.pch"
 @interface ViewController ()
 
 @end
@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"旺合盛世集团！！！");
-    
+//    NSLog(@"旺合盛世集团！！！");
+    self.view.backgroundColor = [UIColor grayColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 150, kDScreenHeight/5)];
+    label.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:label];
+    label.text = @"旺合盛世集团";
+    label.textAlignment = 1;
+    label.centerX = 5;
 }
 
 @end

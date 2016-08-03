@@ -15,6 +15,8 @@
 		D0E0DC0D1D51B70800A2D650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E0DC0B1D51B70800A2D650 /* LaunchScreen.storyboard */; };
 		D0E0DC181D51B70800A2D650 /* __appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E0DC171D51B70800A2D650 /* __appTests.m */; };
 		D0E0DC231D51B70800A2D650 /* __appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E0DC221D51B70800A2D650 /* __appUITests.m */; };
+		D0E0DC351D51C14800A2D650 /* UIImage+ColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E0DC321D51C14800A2D650 /* UIImage+ColorImage.m */; };
+		D0E0DC361D51C14800A2D650 /* UIView+frameExpand.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E0DC341D51C14800A2D650 /* UIView+frameExpand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,12 @@
 		D0E0DC1E1D51B70800A2D650 /* 家政appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "家政appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E0DC221D51B70800A2D650 /* __appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __appUITests.m; sourceTree = "<group>"; };
 		D0E0DC241D51B70800A2D650 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E0DC311D51C14800A2D650 /* UIImage+ColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorImage.h"; sourceTree = "<group>"; };
+		D0E0DC321D51C14800A2D650 /* UIImage+ColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorImage.m"; sourceTree = "<group>"; };
+		D0E0DC331D51C14800A2D650 /* UIView+frameExpand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frameExpand.h"; sourceTree = "<group>"; };
+		D0E0DC341D51C14800A2D650 /* UIView+frameExpand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameExpand.m"; sourceTree = "<group>"; };
+		D0E0DC371D51CCC000A2D650 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		D0E0DC391D51CD6600A2D650 /* configure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = configure.h; path = ../configure.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +113,13 @@
 				D0E0DC011D51B70800A2D650 /* AppDelegate.m */,
 				D0E0DC031D51B70800A2D650 /* ViewController.h */,
 				D0E0DC041D51B70800A2D650 /* ViewController.m */,
+				D0E0DC301D51C14800A2D650 /* category */,
 				D0E0DC061D51B70800A2D650 /* Main.storyboard */,
 				D0E0DC091D51B70800A2D650 /* Assets.xcassets */,
 				D0E0DC0B1D51B70800A2D650 /* LaunchScreen.storyboard */,
 				D0E0DC0E1D51B70800A2D650 /* Info.plist */,
+				D0E0DC391D51CD6600A2D650 /* configure.h */,
+				D0E0DC371D51CCC000A2D650 /* Prefix.pch */,
 				D0E0DBFD1D51B70800A2D650 /* Supporting Files */,
 			);
 			path = "家政app";
@@ -138,6 +149,17 @@
 				D0E0DC241D51B70800A2D650 /* Info.plist */,
 			);
 			path = "家政appUITests";
+			sourceTree = "<group>";
+		};
+		D0E0DC301D51C14800A2D650 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				D0E0DC311D51C14800A2D650 /* UIImage+ColorImage.h */,
+				D0E0DC321D51C14800A2D650 /* UIImage+ColorImage.m */,
+				D0E0DC331D51C14800A2D650 /* UIView+frameExpand.h */,
+				D0E0DC341D51C14800A2D650 /* UIView+frameExpand.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E0DC051D51B70800A2D650 /* ViewController.m in Sources */,
+				D0E0DC351D51C14800A2D650 /* UIImage+ColorImage.m in Sources */,
 				D0E0DC021D51B70800A2D650 /* AppDelegate.m in Sources */,
+				D0E0DC361D51C14800A2D650 /* UIView+frameExpand.m in Sources */,
 				D0E0DBFF1D51B70800A2D650 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/gust50/Desktop/git创建/家政app/家政app/Prefix.pch";
 				INFOPLIST_FILE = "家政app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "History-On-The-Heaven.--app";
@@ -426,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/gust50/Desktop/git创建/家政app/家政app/Prefix.pch";
 				INFOPLIST_FILE = "家政app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "History-On-The-Heaven.--app";
@@ -498,6 +524,7 @@
 				D0E0DC291D51B70800A2D650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E0DC2A1D51B70800A2D650 /* Build configuration list for PBXNativeTarget "家政appTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				D0E0DC2C1D51B70800A2D650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E0DC2D1D51B70800A2D650 /* Build configuration list for PBXNativeTarget "家政appUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +542,7 @@
 				D0E0DC2F1D51B70800A2D650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
